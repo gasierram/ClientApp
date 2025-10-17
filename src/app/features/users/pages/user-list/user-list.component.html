@@ -1,0 +1,16 @@
+<h2>User List</h2>
+
+<a routerLink="/users/add">Add new user</a>
+
+<ul *ngFor="let user of users()">
+  <li>
+    <strong>{{ user.id }}</strong> - {{ user.documentType }} - {{ user.identificationNumber }}
+    <strong>{{ user.fullName.value }}</strong> - {{ user.email }} - {{ user.phoneNumber }}
+    <strong>{{ user.fullName.value }}</strong> - {{ user.status }}
+    <strong *ngIf="user.status"> {{ user.isActive }} - {{ user.status }}
+“Cliente se encuentra en
+mora, por favor validar con Cartera
+    </strong>
+  </li>
+  
+</ul>
